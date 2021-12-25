@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>College Recruitment Portal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "portal/fonts/icomoon/style.css" %}">
+
+    <link rel="stylesheet" href="{% static "portal/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "portal/css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "portal/css/jquery-ui.css" %}">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css" >
+
+
+
+    <link rel="stylesheet" href="{% static "portal/fonts/flaticon/font/flaticon.css" %} >
+
+    <link rel="stylesheet" href="{% static "portal/css/aos.css" %}">
+
+    <link rel="stylesheet" href="{% static "portal/css/style.css" %}">
+
+  </head>
+  <body>
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <div class="site-navbar-wrap js-site-navbar" style="color: #ffffff;background-color: #2980b9 !important;">
+
+      <div class="container">
+        <div class="site-navbar" style="color: #ffffff;background-color: #2980b9 !important;">
+          <div class="py-1">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <h2 class="brand"><a href="/"><strong style="color: #ffffff;background-color: #2980b9 !important;">COLLEGE RECRUITMENT</strong> </a></h2>
+              </div>
+              <div class="col-10">
+                <nav class="site-navigation text-right" role="navigation">
+                  <div class="container">
+                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+                      <li><a href="#">{% if user.is_authenticated %}
+                        <a href="/logout/" style="color: #ffffff;"> Hi {{ user.username }}! logout</a>
+                        {% else %}
+                        <p style="color:#ffffff">Not logged in</p>
+                        {% endif %}</a></li>
+
+                    
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br></br><br></br>
+    {%block body_block%}
+
+
+    {% endblock %}
+
+  <script src="{% static "portal/js/jquery-3.3.1.min.js" %}"></script>
+  <script src="{% static "portal/js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "portal/js/jquery-ui.js" %}"></script>
+  <script src="{% static "portal/js/popper.min.js" %}"></script>
+  <script src="{% static "portal/js/bootstrap.min.js" %}"></script>
+  <script src="{% static "portal/js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "portal/js/jquery.countdown.min.js" %}"></script>
+
+  <script src="{% static "portal/js/bootstrap-datepicker.min.js" %}"></script>
+  <script src="{% static "portal/js/aos.js" %}"></script>
+
+  <script src="{% static "portal/js/main.js" %}"></script>
+  </body>
+</html>
