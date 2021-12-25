@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'Campus-Recruitment-Portal'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E3098E337DD84C6D90B5E7D8E6EE6C1B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_47607FFDCC174EFA9920AEEF9157BA02 }}
