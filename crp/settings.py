@@ -81,8 +81,13 @@ WSGI_APPLICATION = 'crp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'crp',
+        'USER': 'sdixit25',
+        'PASSWORD': 'Sriyog#123',
+        'HOST': 'sriyog25.postgres.database.azure.com',
+        'PORT': '5432',
+        'OPTIONS':{"sslmode":"require"},
     }
 }
 
